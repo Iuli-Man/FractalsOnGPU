@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		B2F942D91FA222B600C46B61 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = B2F942D81FA222B600C46B61 /* main.c */; };
+		B2F942E11FA223BC00C46B61 /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F942E01FA223A400C46B61 /* OpenCL.framework */; };
+		B2F942E81FA223FF00C46B61 /* lodepng.c in Sources */ = {isa = PBXBuildFile; fileRef = B2F942E31FA223FF00C46B61 /* lodepng.c */; };
+		B2F942E91FA223FF00C46B61 /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = B2F942E41FA223FF00C46B61 /* util.c */; };
+		B2F942EA1FA223FF00C46B61 /* mandelbrot.cl in Sources */ = {isa = PBXBuildFile; fileRef = B2F942E51FA223FF00C46B61 /* mandelbrot.cl */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,13 @@
 /* Begin PBXFileReference section */
 		B2F942D51FA222B600C46B61 /* FractalsOnGPU */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FractalsOnGPU; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F942D81FA222B600C46B61 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		B2F942E01FA223A400C46B61 /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = System/Library/Frameworks/OpenCL.framework; sourceTree = SDKROOT; };
+		B2F942E21FA223FF00C46B61 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		B2F942E31FA223FF00C46B61 /* lodepng.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lodepng.c; sourceTree = "<group>"; };
+		B2F942E41FA223FF00C46B61 /* util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = util.c; sourceTree = "<group>"; };
+		B2F942E51FA223FF00C46B61 /* mandelbrot.cl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.opencl; path = mandelbrot.cl; sourceTree = "<group>"; };
+		B2F942E61FA223FF00C46B61 /* lodepng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lodepng.h; sourceTree = "<group>"; };
+		B2F942E71FA223FF00C46B61 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2F942E11FA223BC00C46B61 /* OpenCL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +55,7 @@
 			children = (
 				B2F942D71FA222B600C46B61 /* FractalsOnGPU */,
 				B2F942D61FA222B600C46B61 /* Products */,
+				B2F942DF1FA223A300C46B61 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +70,23 @@
 		B2F942D71FA222B600C46B61 /* FractalsOnGPU */ = {
 			isa = PBXGroup;
 			children = (
+				B2F942E21FA223FF00C46B61 /* config.h */,
+				B2F942E31FA223FF00C46B61 /* lodepng.c */,
+				B2F942E61FA223FF00C46B61 /* lodepng.h */,
+				B2F942E51FA223FF00C46B61 /* mandelbrot.cl */,
+				B2F942E41FA223FF00C46B61 /* util.c */,
+				B2F942E71FA223FF00C46B61 /* util.h */,
 				B2F942D81FA222B600C46B61 /* main.c */,
 			);
 			path = FractalsOnGPU;
+			sourceTree = "<group>";
+		};
+		B2F942DF1FA223A300C46B61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2F942E01FA223A400C46B61 /* OpenCL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +147,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2F942D91FA222B600C46B61 /* main.c in Sources */,
+				B2F942E81FA223FF00C46B61 /* lodepng.c in Sources */,
+				B2F942EA1FA223FF00C46B61 /* mandelbrot.cl in Sources */,
+				B2F942E91FA223FF00C46B61 /* util.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
